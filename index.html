@@ -18,15 +18,18 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body class="main-bg">
+<body>
+
+    <input id="close-menu" class="close-menu" type="checkbox" aria-label="close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close-menu"></label>
     <aside class="menu white-bg">
         <div class="main-content menu-content">
-            <h1>
+            <h1 onclick="getElementById('close-menu').checked = false;">
                 <a href="#home">LOGO</a>
             </h1>
 
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#grid-one">Grid-one</a></li>
                     <li><a href="#gallery">Gallery</a></li>
@@ -219,16 +222,46 @@
                     bringing you support for the :focus-visible pseudo-class in CSS and associated devtools, and the
                     complete removal of Flash support from Firefox.</p>
             </div>
-            <div class="intro-img"> <img src="assets/img/javascript-not-optimized.svg"
+            <div class="intro-img"> <img src="assets/img/contact-form.svg"
                     alt=" Um homem seguranda a logo do CSS, uma mulher segurando a logo do Javascript e um homem segurando a logo do HTML ">
             </div>
             <div class="contact-form">
-                <img src="assets/img/javascript-not-optimized.svg"
-                    alt=" Um homem seguranda a logo do CSS, uma mulher segurando a logo do Javascript e um homem segurando a logo do HTML ">
+                <fieldset class="form-grid">
+                    <legend>Contact me</legend>
+
+                    <div class="form-group">
+                        <label for="first-name">First name</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="Your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name">Last name</label>
+                        <input type="text" name="last-name" id="last-name" placeholder="Your last name"> 
+                    </div>
+
+                    <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder="Your e-mail">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <button type="submit">Send message</button>
+                    </div>
+                </fieldset>
             </div>
         </div>
-
     </section>
+
+<footer id="footer" class=" footer white-bg">
+    <p><a rel="nofollow" target="_blank" href="">Feito por José Rodrigues</a></p>
+</footer>
+
+    <a class="back-to-top" href="#"> ➤ </a>
 
 </body>
 
